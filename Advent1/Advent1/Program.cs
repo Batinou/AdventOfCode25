@@ -11,8 +11,10 @@ namespace Advent1
     {
         static void Main(string[] args)
         {
-            string path = "input.txt";
-            string[] lines = File.ReadAllLines(path);
+
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            string file = "input.txt";
+            string[] lines = File.ReadAllLines(path + "\\" + file);
 
             int startval = 50;
             int actualvalue = 0;
